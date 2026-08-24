@@ -1,16 +1,30 @@
-## Hi there 👋
+# Hi, I'm Ahmet Keles
 
-<!--
-**ahmet-keles/ahmet-keles** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Computer Science student at The University of Texas at Dallas.
 
-Here are some ideas to get you started:
+I am interested in:
+- Backend Software Engineering
+- Distributed Systems
+- Cloud Computing
+- Data Structures & Algorithms
+- Performance-Oriented Software
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Currently Building
+
+- Event-Driven Commerce Platform
+- NovaSearch — Distributed Full-Text Search Engine
+- Distributed Job Scheduler & Workflow Engine
+- Distributed Object Storage System
+
+## Technologies
+
+Java • C++ • Python • C# • JavaScript • SQL
+
+Spring Boot • React • PostgreSQL • Redis • Docker • Git
+
+AWS • Linux
+
+## Connect With Me
+
+- LinkedIn: https://www.linkedin.com/in/ahmet-keles-91b33b228/
+- Portfolio: Coming Soon
