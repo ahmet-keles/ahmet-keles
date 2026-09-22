@@ -14,21 +14,21 @@ Event-driven commerce backend built with Java, Spring Boot, Kafka, and PostgreSQ
 
 ### [NovaSearch](https://github.com/ahmet-keles/novasearch) — in progress
 
-Distributed full-text search engine.
+Hybrid search service built with Python, FastAPI, PostgreSQL, and pgvector. Keyword full-text search and vector similarity search run over the same database and are combined with Reciprocal Rank Fusion, behind a Redis response cache whose invalidation epoch lives in PostgreSQL so it commits atomically with writes. Embeddings sit behind a provider interface; the shipped implementation is a deterministic hashing baseline rather than a trained model.
 
 ### [Distributed Job Scheduler](https://github.com/ahmet-keles/distributed-job-scheduler) — in progress
 
-Distributed job scheduling and workflow engine.
+Distributed job scheduler built with Java, Spring Boot, and PostgreSQL. Competing worker instances claim due jobs with `SELECT … FOR UPDATE SKIP LOCKED` — no broker or coordination service — and leases with heartbeats let any instance recover a crashed worker's jobs. Supports delayed and prioritized jobs, recurring UTC cron schedules, bounded exponential-backoff retries, and immutable per-attempt history under at-least-once execution. Verified with 75 automated tests.
 
 ### [Distributed Object Storage](https://github.com/ahmet-keles/distributed-object-storage) — in progress
 
-Distributed object storage system.
+Distributed object storage built with Java, Spring Boot, and PostgreSQL. A coordinator splits objects into fixed-size chunks, replicates each chunk across two storage nodes, and verifies every byte with SHA-256 end to end, so any single node can be lost without making an object unreadable. A background repair worker rebuilds missing replicas from a checksum-verified surviving copy, making a later second node loss survivable; end-to-end tests stop real node containers to prove it.
 
 ## Technologies
 
 - **Languages:** Java, Python, C++, C#, JavaScript, SQL
-- **Backend:** Spring Boot, Apache Kafka, REST APIs
-- **Data:** PostgreSQL, Redis, Flyway
+- **Backend:** Spring Boot, FastAPI, Apache Kafka, REST APIs
+- **Data:** PostgreSQL, pgvector, Redis, Flyway
 - **Infrastructure:** Docker, Docker Compose, Testcontainers, GitHub Actions, AWS, Linux, Git
 
 ## Connect
